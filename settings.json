@@ -1,130 +1,86 @@
 {
-  "vim.incsearch": true,
-  "vim.searchHighlightColor": "#f6ff0080",
-  "vim.searchHighlightTextColor": "#fff",
-  "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": true,
-  "vim.hlsearch": true,
-  "vim.highlightedyank.enable": true,
-  "vim.smartRelativeLine": true,
-  "vim.surround": true,
-  "vim.easymotion": true, // Search with "\\f"
-  "vim.leader": "<space>",
-  "editor.lineNumbers": "relative",
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["]", "d"],
-      "commands": ["editor.action.marker.nextInFiles"],
-      "silent": true
-    },
-    {
-      "before": ["[", "d"],
-      "commands": ["editor.action.marker.prevInFiles"],
-      "silent": true
-    },
-    {
-      "before": ["<Esc>"],
-      "commands": [":nohl"], // Clears highlight of current search
-      "silent": true
-    },
-    // Neovim LSP-like mappings
-    { "before": ["g", "d"], "commands": ["editor.action.revealDefinition"] },
-    { "before": ["g", "D"], "commands": ["editor.action.revealDeclaration"] },
-    { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] },
-    {
-      "before": ["g", "r"],
-      "commands": ["editor.action.referenceSearch.trigger"]
-    },
-    { "before": ["g", "y"], "commands": ["editor.action.goToTypeDefinition"] },
-    { "before": ["K"], "commands": ["editor.action.showHover"] },
-    { "before": ["g", "l"], "commands": ["editor.action.showHover"] }
-  ],
-  "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-f>": false
+  "[css]": {
+    "editor.tabSize": 2,
   },
-
-  "errorLens.enabled": true,
-  "errorLens.messageEnabled": true, // Shows the inline error text
-  "errorLens.followCursor": "allLinesExceptActive", // don't spotlight the current cursor line
-  "editor.hover.enabled": false,
-  "editor.hover.delay": 10000, // Very long delay to effectively disable hover
-  "editor.parameterHints.enabled": false, // Disable parameter hints popup
-
-  /**
-
-  /*
-   * Language Options
-   */
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "javascript.preferGoToSourceDefinition": true,
-  "typescript.preferGoToSourceDefinition": true,
-  "debug.javascript.autoAttachFilter": "onlyWithFlag",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-
-  "typescript.suggest.autoImports": true,
-
-  /**
-   * Extensions Options
-   */
-
-  "problems.autoReveal": false,
-  "problems.showCurrentInStatus": false, // Don't show in status bar either
-  "problems.decorations.enabled": false, // Disable problem decorations
-  "workbench.panel.opensMaximized": "never", // Prevent panel from opening maximized
-  "workbench.statusBar.visible": true, // Keep status bar but remove problem info
-  "workbench.view.alwaysShowHeaderActions": false, // Show activity bar for file explorer/extensions access
-  "workbench.panel.defaultLocation": "right", // Move panel to right (less intrusive)
-  "typescript.preferences.includePackageJsonAutoImports": "off", // Disable TS auto imports
-  "javascript.preferences.includePackageJsonAutoImports": "off", // Disable JS auto imports
-  "editor.lightbulb.enabled": "off", // Disable lightbulb suggestions
-  "editor.codeActionsOnSave": {}, // Disable code actions on save
-
-  "extensions.experimental.affinity": {
-    "vscodevim.vim": 1 // GREATLY improves vim performance
+  "[dockercompose]": {
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
   },
-  "gitlens.showWhatsNewAfterUpgrades": false,
-  "gitlens.defaultGravatarsStyle": "retro",
-  "gitlens.plusFeatures.enabled": false,
-  "gitlens.codeLens.enabled": false,
-  "cSpell.spellCheckDelayMs": 350,
-  "cSpell.textDecorationColor": "lightblue",
-  "cSpell.overviewRulerColor": "",
-  "cSpell.suggestionsTimeout": 500,
-  "tailwindCSS.experimental.classRegex": [
-    // Used in Shadcn UI
-    // Adds support for tailwindcss class intellisense within CVA and CX from [Class Variance Authority](https://cva.style/)
-    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
-  ],
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+  },
+  "[html]": {
+    "editor.tabSize": 2,
+  },
+  "[javascript]": {
+    "editor.tabSize": 2,
+  },
+  "[javascriptreact]": {
+    "editor.tabSize": 2,
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+  },
+  "[typescriptreact]": {
+    "editor.tabSize": 2,
+  },
   "auto-close-tag.activationOnLanguage": [
     "html",
     "javascriptreact",
-    "typescriptreact"
+    "typescriptreact",
   ],
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "breadcrumbs.symbolPath": "off", // Disables language symbols in breadcrumbs.
+  "breadcrumbs.enabled": false,
   "breadcrumbs.icons": false,
-  "window.systemColorTheme": "dark",
-  "window.title": " ",
-  "workbench.activityBar.location": "hidden", // More horizontal screen space
-  "workbench.tips.enabled": false,
-  "editor.scrollbar.verticalScrollbarSize": 12,
-  "editor.cursorBlinking": "solid", // Annoying
-  "editor.fontSize": 16, // Just right :p
-  "editor.fontLigatures": true, // Fancy === and !== type symbols
+  "breadcrumbs.symbolPath": "off",
+  "chat.editing.confirmEditRequestRetry": false,
+  "chat.tools.terminal.autoApprove": {
+    "git checkout": true,
+    "npm run analyze": true,
+    "npx": true,
+  },
+  "cSpell.overviewRulerColor": "",
+  "cSpell.spellCheckDelayMs": 350,
+  "cSpell.suggestionsTimeout": 500,
+  "cSpell.textDecorationColor": "lightblue",
+  "cSpell.userWords": ["firestore", "Tokenomics"],
+  "debug.javascript.autoAttachFilter": "onlyWithFlag",
+  "editor.accessibilitySupport": "off",
+  "editor.codeActionsOnSave": {},
+  "editor.codeLens": false,
+  "editor.cursorBlinking": "solid",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fastScrollSensitivity": 4,
+  "editor.folding": true,
+  "editor.fontFamily": "CaskaydiaCove Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.glyphMargin": true,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.hover.delay": 10000,
+  "editor.hover.enabled": "off",
+  "editor.lightbulb.enabled": "off",
+  "editor.lineDecorationsWidth": 10,
+  "editor.lineNumbers": "relative",
+  "editor.lineNumbersMinChars": 3,
+  "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
-  "terminal.integrated.fontSize": 16,
+  "editor.overviewRulerBorder": false,
+  "editor.parameterHints.enabled": false,
+  "editor.renderWhitespace": "selection",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.verticalScrollbarSize": 12,
+  "editor.showFoldingControls": "mouseover",
+  "editor.stickyScroll.enabled": false,
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
-        // For 'One Dark Pro' theme. Remove this rule if you want to delete italics.
         "name": "italic font",
         "scope": [
           "comment",
@@ -157,72 +113,217 @@
           "text.html.basic entity.other.attribute-name",
           "tag.decorator.js entity.name.tag.js",
           "tag.decorator.js punctuation.definition.tag.js",
-          "source.js constant.other.object.key.js string.unquoted.label.js"
+          "source.js constant.other.object.key.js string.unquoted.label.js",
         ],
         "settings": {
-          "fontStyle": "italic"
-        }
-      }
-    ]
+          "fontStyle": "italic",
+        },
+      },
+    ],
   },
-  "zenMode.hideStatusBar": false, // We want the status bar for VIM commands / search / etc
-  "window.density.editorTabHeight": "compact", // Default tabs are a bit too vertically thick. Gives more vertical space
-  "workbench.startupEditor": "none", // Remove duplicates
-
-  /**
-   * General Options
-   */
-  "editor.linkedEditing": true,
-  "files.autoSave": "onWindowChange", // Auto-saves if window gets de-focused
-  "editor.formatOnSave": true,
-  "terminal.integrated.commandsToSkipShell": ["workbench.action.closePanel"],
-  "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
-  "editor.accessibilitySupport": "off",
-  "git.openRepositoryInParentFolders": "always",
+  "errorLens.enabled": true,
+  "errorLens.followCursor": "allLinesExceptActive",
+  "errorLens.messageEnabled": true,
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1,
+  },
   "extensions.ignoreRecommendations": true,
-  "settingsSync.keybindingsPerPlatform": false,
-  "telemetry.telemetryLevel": "off",
-  "security.workspace.trust.banner": "never",
-  "security.workspace.trust.untrustedFiles": "open",
-  "security.workspace.trust.startupPrompt": "never",
-  "security.workspace.trust.enabled": false,
-  "git.enableSmartCommit": true,
-  "git.confirmSync": false,
-  "git.autoStash": true,
+  "files.autoSave": "off",
+  "files.exclude": {
+    "**/._*": true,
+    "**/.DS_Store": true,
+  },
   "git.autofetch": true,
-  "workbench.layoutControl.enabled": false,
-  "window.commandCenter": false,
-  "zenMode.fullScreen": false,
-  "zenMode.hideLineNumbers": false,
+  "git.autoStash": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "always",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+  },
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.defaultGravatarsStyle": "retro",
+  "gitlens.plusFeatures.enabled": false,
+  "gitlens.showWhatsNewAfterUpgrades": false,
+  "glassit.alpha": 243,
+  "glassit.step": 0,
+  "javascript.preferences.includePackageJsonAutoImports": "off",
+  "javascript.preferGoToSourceDefinition": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "material-icon-theme.hidesExplorerArrows": false,
+  "problems.autoReveal": false,
+  "problems.decorations.enabled": true,
+  "problems.showCurrentInStatus": false,
+  "problems.sortOrder": "position",
+  "rust-analyzer.diagnostics.enable": true,
+  "rust-analyzer.diagnostics.experimental.enable": true,
+  "rust-analyzer.checkOnSave": true,
+  "rust-analyzer.check.command": "clippy",
+  "search.exclude": {
+    "**/._*": true,
+    "**/.DS_Store": true,
+  },
+  "security.workspace.trust.banner": "never",
+  "security.workspace.trust.enabled": false,
+  "security.workspace.trust.startupPrompt": "never",
+  "security.workspace.trust.untrustedFiles": "open",
+  "settingsSync.keybindingsPerPlatform": false,
+  "supermaven.enableJumpSuggestions": false,
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+  ],
+  "telemetry.feedback.enabled": false,
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.commandsToSkipShell": ["workbench.action.closePanel"],
+  "terminal.integrated.confirmOnKill": "always",
+  "terminal.integrated.defaultLocation": "view",
   "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.env.windows": {
+    "PATH": "${env:PATH};${workspaceRoot}\\node_modules\\.bin;${env:PNPM_HOME}",
+  },
+  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
+  "terminal.integrated.fontSize": 14.5,
+  "terminal.integrated.gpuAcceleration": "off",
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
+      "icon": "terminal-powershell",
       "path": "pwsh",
-      "icon": "terminal-powershell"
-    }
+    },
   },
-  "terminal.integrated.env.windows": {
-    "PATH": "${env:PATH};${workspaceRoot}\\node_modules\\.bin;${env:PNPM_HOME}"
-  },
-  "explorer.confirmDragAndDrop": false,
-  "explorer.confirmDelete": false,
-  "explorer.confirmPasteNative": false,
   "terminal.integrated.scrollback": 5000,
-  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "typescript.preferences.includePackageJsonAutoImports": "off",
+  "typescript.preferGoToSourceDefinition": true,
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vim.easymotion": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-space>": false,
+    "<C-Space>": false,
+    "f": true,
+    "F": true,
+    "t": false,
+    "T": true,
+  },
+  "vim.highlightedyank.enable": true,
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "after": ["<Esc>"],
+      "before": ["j", "k"],
+    },
+  ],
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"],
+      "silent": true,
+    },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"],
+      "silent": true,
+    },
+    {
+      "before": ["<Esc>"],
+      "commands": [":nohl"],
+      "silent": true,
+    },
+    {
+      "before": ["g", "D"],
+      "commands": ["editor.action.revealDeclaration"],
+    },
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"],
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.referenceSearch.trigger"],
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"],
+    },
+    {
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"],
+    },
+    {
+      "before": ["g", "y"],
+      "commands": ["editor.action.goToTypeDefinition"],
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"],
+    },
+    {
+      "before": ["g", "l"],
+      "commands": ["editor.action.showHover"],
+    },
+  ],
+  "vim.searchHighlightColor": "#f6ff0080",
+  "vim.searchHighlightTextColor": "#fff",
+  "vim.smartRelativeLine": false,
+  "vim.surround": true,
+  "vim.useCtrlKeys": true,
+  "vim.useSystemClipboard": true,
+  "window.commandCenter": false,
+  "window.density.editorTabHeight": "compact",
+  "window.menuBarVisibility": "toggle",
+  "window.systemColorTheme": "dark",
+  "window.title": " ",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#3c3836",
+    "statusBar.noFolderBackground": "#3c3836",
+    "statusBar.debuggingBackground": "#3c3836",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff",
+  },
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.editor.decorations.badges": true,
+  "workbench.editor.decorations.colors": true,
   "workbench.editor.empty.hint": "hidden",
-  "telemetry.feedback.enabled": false,
-  "supermaven.enableJumpSuggestions": false,
-  "workbench.colorTheme": "Catppuccin Mocha",
-  "workbench.iconTheme": "catppuccin-mocha", // SHUT UP COPILOT
-  "editor.fontFamily": "'Cascadia Code NF','CaskaydiaCove Nerd Font','Cascadia Code PL',Consolas,'Courier New',monospace",
-  "terminal.integrated.fontFamily": "'Cascadia Code NF','CaskaydiaCove Nerd Font','Cascadia Code PL'",
-
-  // Reduce editor chrome
-  "editor.glyphMargin": true,
-  "editor.inlayHints.enabled": "offUnlessPressed",
-  "editor.showFoldingControls": "never",
-  "editor.renderWhitespace": "selection",
-
-  // Window transparency (requires GlassIt-VSC extension)
-  "editor.stickyScroll.enabled": false
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.revealIfOpen": true,
+  "workbench.editor.tabActionCloseVisibility": true,
+  "workbench.editor.tabActionLocation": "right",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.panel.defaultLocation": "bottom",
+  "workbench.panel.opensMaximized": "never",
+  "workbench.sideBar.location": "left",
+  "workbench.secondarySideBar.defaultVisibility": "visibleInWorkspace",
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": true,
+  "workbench.tips.enabled": false,
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.tree.indent": 12,
+  "workbench.view.alwaysShowHeaderActions": false,
+  "zenMode.fullScreen": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideStatusBar": false,
+  "terminal.external.linuxExec": "/usr/bin/ghostty",
+  "inlineChat.enableV2": true,
+  "terminal.external.osxExec": "Ghostty.app",
+  "terminal.explorerKind": "external",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "chat.viewSessions.orientation": "stacked",
+  "cursor.cpp.disabledLanguages": ["plaintext", "markdown", "scminput"],
+  "workbench.activityBar.orientation": "vertical",
 }
